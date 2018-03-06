@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="calculation"></p>
+    <script>
+        //        function myFunc() {
+        //            var i = 20
+        //            return i
+        //        }
+        var a = {
+            "fname": "Pushp"
+            , "Lname": "ender"
+        }
+        var b = ["anuj", " anju ", " abhi ", "alag"]
+        var c = ["j", "a", "b", "c"]
+        var num = [2, 1, 6, 3, 2, 4]
+            //  document.getElementById('calculation').innerHTML = "hello \"g\"" + b.length;
+            //        for (i = 0; i < b.length; i++) {
+            //            document.write(b[i] + "\n ")
+            //        }
+            // document.write(b)
+        document.write("\n")
+            //    document.write(b.join("*"))
+            //        b.pop()
+            //        document.write(b)
+            //        b.push(" abc ")
+            //        document.write(b)
+            //b.shift()
+            //b[0] = "insert"
+            //b.splice(2, 1, "demo", "practice")
+            // var new1 = b.concat(c)
+            //        var new2 = b.concat(["K", "D"
+            //            , "E", "F"])
+        num.sort(function (a, b) { //for sort numbers
+            return a - b
+        });
+        // document.write(new1)
+        //c.reverse()
+        var text = '{"employees":[' + '{"firstName":"John","lastName":"Doe" },' + '{"firstName":"Anna","lastName":"Smith" },' + '{"firstName":"Peter","lastName":"Jones" }]}';
+        ']}'
+        var obj = JSON.parse(text)
+        document.write(text)
+        document.write(obj.employees[2].firstName)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #head {
+            border: solid 4px blue;
+        }
+        
+        #addremove {
+            display: none;
+        }
+    </style>
+    <script src="asssets/main.js"></script>
+</head>
+
+<body>
+    <table style="width:50%;" id="head">
+        <caption>CREATE DYNAMIC TAGS</caption>
+        <tr>
+            <th>
+                <label id="orderlist" onclick="orderList()">OL</label>
+                <label id="unorderlist" onclick="unorderList()">UL</label>
+            </th>
+        </tr>
+    </table>
+    <div id="addremove">
+        <input type="text" id="text">
+        <br>
+        <br>
+        <input type="button" value="Add" onclick="Add1()">
+        <input type="button" value="Remove" onclick="remove1()"> </div>
+    <p id="data"></p>
+    <table>
+        <tr>
+            <td>
+                <ul id="ul"></ul>
+            </td>
+        </tr>
+    </table>
+    <table style="border: solid">
+        <tr>
+            <td>
+                <ol id="order"> </ol>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

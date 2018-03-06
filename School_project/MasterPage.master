@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+       
+        
+    <div>
+        
+        <div id="Div1" class="Div1"  runat="server">
+
+        </div>
+        <div id="Div2" class="nav" runat="server">
+            <nav id="Nav1" runat="server" class="nav" >
+                <asp:Button ID="Button1" runat="server" Text="Add" style="margin:7px ;font-size:medium" OnClick="Button1_Click"/>
+                <asp:Button ID="Button2" runat="server" Text="Update" style="margin:7px;font-size:medium"/>
+                <asp:Button ID="Button3" runat="server" Text="Show" style="margin:7px; font-size:medium"/>
+                <asp:Button ID="Button4" runat="server" Text="Show_All" style="margin:7px;font-size:medium"/>
+                     
+            </nav>
+
+        </div>
+    </div>
+    
+
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

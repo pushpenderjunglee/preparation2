@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head> </head>
+
+<body>
+    <p id="demo"> demo </p>
+    <script>
+        var a = {
+            fname: "chintu"
+            , lname: "pintu"
+            , fullname: function () {
+                return this.fname + " " + this.lname;
+            }
+        }
+        var myobject = [
+            "ajay"
+             , "vijay"
+            ];
+        document.getElementById("demo").innerHTML = a.fullname.apply(myobject);
+    </script>
+</body>
+
+</html>

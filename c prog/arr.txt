@@ -1,0 +1,32 @@
+#include<stdio.h>
+void main()
+{
+    int i,j,k,num=7;
+    int arr[7]={2,4,2,7,1,4,4};
+    int count[7];
+    for(i=0;i<num;i++)
+    {
+        k=1;
+        for(j=i+1;j<num;j++)
+        {
+            if(arr[i]==arr[j])
+            {
+                count[i]=k++;
+            }
+            // for(k=arr[j-1];k<arr[num-1];k++)
+            //     {
+            //         arr[k]=arr[k+1];
+                    
+            //     }
+       }   
+       
+      // printf("%d = %d time\n",arr[i],count);
+    }
+    max=count[0];
+    for(i=0;i<7;i++)
+    {
+        if(max<count[i])
+        max=count[i];
+    }
+    printf("%d",max);
+}

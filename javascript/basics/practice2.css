@@ -1,0 +1,13 @@
+.left {
+    float: left;
+}
+
+.right {
+    flex: right;
+}
+
+.clearfix {
+    content: "";
+    display: table;
+    clear: both;
+}

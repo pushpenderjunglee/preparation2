@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="index.css"> </head>
+
+<body>
+    <div class="navContain">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="read.html">Show</a></li>
+            <li><a href="update.html">Update</a></li>
+            <li><a href="delete.html">Delete</a></li>
+            <li><a href="#">Extra</a></li>
+        </ul>
+    </div>
+    <form action="" class="form">
+        <input type="text" id="id" required>
+        <input type="button" value="Read" onclick="getData()">
+        <div> Name:
+            <input type="text" id="txt_name" class="textbox" required> </div>
+        <br/>
+        <br/>
+        <div> Id:
+            <input type="number" id="txt_id" class="textbox" required readonly> </div>
+        <br/>
+        <br/>
+        <div>Location:
+            <select id="loc">
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Gurgaon">Gurgaon</option>
+            </select>
+        </div>
+        <br>
+        <br>
+        <div>Gender:
+            <input type="radio" id="male" name="gender" value="Male">Male
+            <input type="radio" id="female" name="gender" value="Female">Female </div>
+        <br>
+        <br/>
+        <br/>
+        <div>Hobbies:
+            <input type="checkbox" id="hobby1" name="hobby" value="Music">Music
+            <input type="checkbox" id="hobby2" name="hobby" value="Play">Play</div>
+        <br/>
+        <br/>
+        <input type="button" value="Update" onclick="update()"> </form>
+</body>
+
+</html>

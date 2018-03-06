@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function myfunc() {
+            document.getElementById('AnotherText').style.display = 'none'
+        } <
+    </script>
+    <script src="practice.js"></script>
+    <!--
+    <script>
+    window.alert(5 + 9)</script>
+-->
+</head>
+
+<body>
+    <h1>My First Javascript</h1>
+    <button type="button" onclick="document.getElementById('image').src= 'bulb-off.jpg'">click me to see change</button>
+    <p id="demo">THis is TexT data</p>
+    <p id="AnotherText">THis is Another TexT data</p>
+    <button type="button" onclick="document.getElementById('image').src='bulb-on.gif'">click me to see another change</button> <img id="image" src="bulb-off.jpg"> </body>
+<button type="button" onclick="document.getElementById('demo').style.fontSize='35px'">change text size</button>
+<button type="button" onclick="document.getElementById('demo').style.display='none'">to hide text</button>
+<button type="button" onclick="document.getElementById('demo').style.display='block'">to show hidden text</button>
+<button type="button" onclick="external_Function()">External_function</button>
+<!--<button type="button" onclick="document.write(5 + 6)">Try it</button>//it will delete all existing data-->
+
+</html>

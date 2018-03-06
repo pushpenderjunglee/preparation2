@@ -1,0 +1,9 @@
+{
+    "data": [{
+        "name": "Abhish"
+        , "id": "2"
+        , "location": "Delhi"
+        , "gender": "Male"
+        , "hobby": ["Music", "Play"]
+    }]
+}

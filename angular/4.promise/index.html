@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="lib/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/customfilter.js"></script>
+    <script src="js/model.js"></script>
+    <script src="js/controller.js"></script>
+    <script></script>
+</head>
+
+<body ng-app="myapp" ng-controller="myctrl">
+    <input type="text" ng-model="search">
+    <button ng-click="show()"> Get</button>
+    <select name="sort" id="" class="sort" ng-model="sortby">
+        <option value="price">BY price</option>
+        <option value="id">BY id</option>
+    </select> {{sortby}}
+    <input type="checkbox" ng-model="sort">asc/dsc {{sort}} {{error}}
+    <ul>
+        <li ng-repeat="r in result|orderBy:sortby:sort|filter:search"> {{r.url}} {{r.name}} {{r.price|currency}} <img src="{{r.image}}" alt=""></li>
+    </ul>
+</body>
+
+</html>

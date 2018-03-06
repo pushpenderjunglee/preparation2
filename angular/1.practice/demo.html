@@ -1,0 +1,42 @@
+<!--
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<style>
+    input.ng-invalid {
+        background-color: cadetblue;
+    }
+</style>
+
+<body>
+    <form ng-app="" name="myForm">
+        <input type="email" ng-model="check" name="myEmail"> <span ng-show="myForm.myEmail.$error.email">Not a valid mail</span> {{myForm.myEmail.$valid}} {{myForm.myEmail.$dirty}} {{myForm.myEmail.$touched}}</form>
+</body>
+
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-app="myApp" ng-controller="myControl">
+        <p ng-repeat="x in names|filter:test">{{x | uppercase}}</p>
+        <h1 ng-model="number">{{number }}</h1>
+
+    </div>
+    <script>
+        var app = angular.module("myApp", []);
+
+        app.controller("myControl", function($scope) {
+            $scope.names = ["anuj", "abhi", "10"];
+            $scope.number = 50;
+        });
+
+    </script>
+</body>
+
+</html>

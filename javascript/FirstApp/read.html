@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="index.css" type="text/css"> </head>
+
+<body>
+    <div class="navContain">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="read.html">Show</a></li>
+            <li><a href="update.html">Update</a></li>
+            <li><a href="delete.html">Delete</a></li>
+            <li><a href="#">Extra</a></li>
+        </ul>
+    </div>
+    <div>
+        <input type="text" id="id" required>
+        <input type="button" value="Read" onclick="getData()"> </div>
+    <div class="outsideform">
+        <form class="form" style="display:none">
+            <div>
+                <p>Name</p>
+                <input type="text" id="txt_name" placeholder="Enter your Full Name" disable required>
+                <br/>
+                <br/>
+                <div> Id:
+                    <input type="number" id="txt_id" disable required> </div>
+                <br/>
+                <br/>
+                <div>Location:
+                    <select id="loc" disable>
+                        <option value="Delhi" disable>Delhi</option>
+                        <option value="Mumbai" disable>Mumbai</option>
+                        <option value="Gurgaon" disable>Gurgaon</option>
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>Gender:
+                    <input type="radio" id="male" name="gender" value="Male" disable>Male
+                    <input type="radio" id="female" name="gender" value="Female" disable>Female </div>
+                <br>
+                <br/>
+                <br/>
+                <div>Hobbies:
+                    <input type="checkbox" id="hobby1" name="hobby" value="Music" disable>Music
+                    <input type="checkbox" id="hobby2" name="hobby" value="Play" disable>Play</div>
+                <br/>
+                <br/> </form>
+        </div>
+</body>
+
+</html>

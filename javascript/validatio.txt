@@ -1,0 +1,51 @@
+window.addEventListener("load", doTask);
+
+function doTask() {
+    document.querySelector("#txt_name").focus();
+}
+
+function check() {
+    document.getElementById('option2').innerHTML = "You entered a valid password: " + form.pass.value;
+    return true;
+}
+
+function compare() {
+    var password = document.getElementById('pass').value;
+    var repassword = document.getElementById('repass').value;
+    console.log("\npassword = " + password + " repassword = " + repassword);
+    if (repassword == password) {
+        document.getElementById('option3').innerHTML = "Valid"
+    }
+    else {
+        document.getElementById('option3').innerHTML = "Invalid"
+    }
+}
+
+function valid() {
+    mail = document.getElementById('email').value
+    console.log(mail);
+    ValidateEmail(mail)
+}
+
+function ValidateEmail(mail) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(form.email.value)) {
+        document.getElementById('option1').innerHTML = ""
+        return (true)
+    }
+    document.getElementById('option1').innerHTML = "enter valid email id"
+    return (false)
+}
+
+function red() {
+    document.getElementById('name').style.backgroundColor = "red"
+}
+
+function blue() {
+    document.getElementById('name').style.backgroundColor = "blue"
+    if (document.getElementById('name').value.length <= 3) {
+        document.getElementById('option').innerHTML = "Enter valid name"
+    }
+    if (document.getElementById('name').value.length > 3) {
+        document.getElementById('option').innerHTML = ""
+    }
+}

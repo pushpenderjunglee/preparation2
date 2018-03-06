@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.addEventListener("load", table);
+
+        function table() {
+            var table = document.createElement('table');
+            var tr = table.insertRow();
+            var btn = document.createElement("button");
+            tr.insertCell(0).innerHTML.appendChild(btn)
+            tr.insertCell(1).innerHTML = "hello world";
+            document.body.appendChild(table);
+            document.body.appendChild(btn);
+        }
+    </script>
+</head>
+
+<body> </body>
+
+</html>

@@ -1,0 +1,50 @@
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/**/
+
+#content {
+    width: 30%;
+    background-color: #f1f1f1;
+    margin: auto;
+    box-shadow: 1px 10px 100px grey inset, -1px -10px 100px grey inset;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    padding: 2% 0;
+    
+}
+
+.row {
+    margin-bottom: 5%;
+}
+
+.my-form {
+    width: 50%;
+    margin: auto;
+    border: 1px solid;
+}
+
+.label {
+    width: 40%;
+    border: 1px solid;
+}
+
+.textbox {
+    width: 58%;
+    border: 1px solid red;
+}
