@@ -14,10 +14,10 @@
 
 <body>
     <div ng-app="myapp" ng-controller="myctrl">
-        <button ng-click="show()">GET</button>
+        <button ng-click="show()">GET Data</button>
         <button>SORT BY</button>
         <div style="display:none" id="srch">
-            <input type="text" ng-model="search">
+            <input type="text" ng-model="search" placeholder="Search">
             <select name="sort" id="" class="sort" ng-model="sortby">
                 <option value="price">Price</option>
                 <option value="discount">Discount</option>

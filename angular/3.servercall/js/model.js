@@ -4,12 +4,12 @@ app.factory("myfactory", function ($http) {
         $http.get(url.wsurl).then(sucess, fail);
 
         function sucess(data) {
-            scope.result = data;
+            scope.resolve = data;
         }
 
-        function error(er) {
-            scope.result = er;
+        function fail(er) {
+            scope.reject = er;
         }
     }
     return object;
-})
+});

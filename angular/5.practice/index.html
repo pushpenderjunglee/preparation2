@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app= angular.module("myapp",["myapp2"]);
+        const app2= angular.module("myapp2",[]);
+        app.factory("myfactory",function(){
+            var obj={
+                x:0,
+                setX(x){
+                    this.x=x;
+                },
+                getX(){
+                    return this.x=x;
+                }
+            }
+            return obj;
+        });
+        
+        app2.factory("myfactory2",()=>{
+        var object={
+        sayhello=function(name){
+        return "Hello"+name;
+        }
+        }
+        return object;
+        });
+        app.controller("myctrl1",($scope,$rootscope,myfactory)=> {
+            var emps=[{
+                id:1001,
+                name:'Ram',
+                salary:9000
+
+            },{
+                id:1002,
+                name:'singh',
+                salary:20000
+
+            }];
+            $scope.emp=emps;
+            $rootscope.firstname ="Amit";
+            myfactory.setX(1000);
+
+        });
+        app.controller("myctrl2",function($scope,myfactory,myfactory2){
+        $scope.lastname="srivastava";
+        $scope.fullname="name"+$scope.firstname +" "+ $scope.lastname+" value is "+myfactory.getX()+" "+factory2.sayhello("ajay");
+        
+        });
+        
+    </script>
+</head>
+
+<body ng-app="myapp">
+    <div ng-controller="myctrl1">
+<h3>Employers are:</h3>
+<ul>
+    <li></li>
+</ul>
+    </div>
+   <div ng-controller="myctrl2">
+        First name{{firstname}} Last name {{lastname}}
+        Full name is {{fullname}}F
+   </div>
+<input type="text" ng-model="name">
+<h2 class="alert-success">{{name}}</h2>
+</body>
+
+</html>
