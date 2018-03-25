@@ -1,15 +1,15 @@
 app.factory("myfactory", function ($http) {
     var object = {};
-    object.image = function (srchimage, scope) {
-        $http.get(url.wsurl).then(sucess, fail);
+    object.image = function (srchimg, scope) {
+        $http.get(url.wsurl).then(success, fail);
 
-        function sucess(data) {
-            scope.resolve = data;
+        function success(data) {
+            scope.result = data.data;
         }
 
         function fail(er) {
-            scope.reject = er;
+            scope.error = er;
         }
-    }
+    };
     return object;
 });

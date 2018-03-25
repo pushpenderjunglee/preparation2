@@ -10,7 +10,7 @@ var data = [];
 var flag = 0;
 
 function saveData() {
-    if (localStorage.length) { // improove the technique
+    if (localStorage.length) { // validation
         var allData = JSON.parse(localStorage.details);
         var arrayData = allData.data;
         for (let i = 0; i < arrayData.length; i++) {

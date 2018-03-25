@@ -1,0 +1,35 @@
+div {
+    margin: 0;
+    height: 50px;
+}
+
+div ul {
+    background-color: black;
+    list-style: none;
+    float: left;
+    width: 100%;
+}
+
+div ul li {
+    display: block;
+    text-decoration: none;
+    width: 80px;
+    margin-left: 10px;
+    color: white;
+    float: left;
+    padding: 2px;
+    width: 15%;
+    font-size: 30px;
+    text-align: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    height: 50px;
+}
+
+a:hover {
+    background-color: grey;
+}

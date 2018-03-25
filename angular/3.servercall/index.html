@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <script src="lib/angular.min.js"></script>
+    <script src="js/config.js"></script>
     <script src="js/app.js"></script>
     <script src="js/model.js"></script>
     <script src="js/controller.js"></script>
-    <script src="js/config.js"></script>
 </head>
 
 <body ng-app="myapp">
-    <div ng-controller="<myctr></myctr>l">
+    <div ng-controller="myctr">
         <input type="text" ng-model="search">
         <button ng-click="getImage()">Search Image</button> {{result}}
         <ul>
-            <li ng-repeat="{{r in result}}" style="list-style: none"> <img src="{{r.images.fixed_height.url}}"> </li>
+            <li ng-repeat="{{r in result.data}}"> <img src="{{r.images.fixed_height.url}}"> </li>
         </ul>
     </div>
 </body>
