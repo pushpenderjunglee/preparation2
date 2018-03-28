@@ -1,0 +1,45 @@
+{
+    "data": [
+        {
+            "brand": "Adidas"
+            , "size": 7
+            , "colour": "Black Solid"
+            , "price": 3000
+            , "discount": "50%"
+            , "img": "http://assets.myntassets.com/w_480,q_90/assets/images/1668468/2016/12/23/11482473303895-Adidas-NEO-Men-Casual-Shoes-6331482473303679-1.jpg"
+            , "rating": 5
+    }, {
+            "brand": "Sparx"
+            , "size": 6
+            , "colour": "Navy Blue"
+            , "price": 1099
+            , "discount": "30%"
+            , "img": "http://2.bp.blogspot.com/-XByHBluRRSQ/T_33nzI64jI/AAAAAAAAB3A/s3SE9XxXooQ/s1600/navy%2Bblue%2Brosette%2Bheel.jpeg"
+            , "rating": 2.5
+    }, {
+            "brand": "Nike"
+            , "size": 7
+            , "colour": "White"
+            , "price": 2499
+            , "discount": "30%"
+            , "img": "http://esq.h-cdn.co/assets/17/12/480x555/gallery-1490285707-795935-mrp-fr-xl-1.jpg"
+            , "rating": 5
+    }, {
+            "brand": "Woodland"
+            , "size": 7
+            , "colour": "Black and Brown Colourblocked"
+            , "price": 2000
+            , "discount": "10%"
+            , "img": "http://assets.myntassets.com/w_480,q_90/assets/images/1687286/2017/2/22/11487758753611-Provogue-Men-Casual-Shoes-3881487758753357-1.jpg"
+            , "rating": 5
+    }, {
+            "brand": "Bata"
+            , "size": 7
+            , "colour": "Black Solid"
+            , "price": 3000
+            , "discount": "50%"
+            , "img": "https://img.looksgud.com/upload/item-image/356/7nbp/7nbp-red-tape-black-solid-synthetic-leather-derbys-shoes_500x500_0.jpg"
+            , "rating": 5
+    }
+]
+}

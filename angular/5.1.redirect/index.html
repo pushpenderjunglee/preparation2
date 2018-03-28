@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="app.js"></script>
+    <script src="factory/afactory.js"></script>
+    <script src="controller/aCtrl.js"></script>
+    <script src="controller/bCtrl.js"></script>
+    <script src="route/route.js"></script>
+</head>
+
+<body>
+    <div ng-app="redirect">
+        <div>
+            <ul class="list">
+                <li><a ng-href="#/">AAA</a></li>
+                <li><a ng-href="#/b">BBB</a></li>
+            </ul>
+            <input type="text" ng-model="name">
+            <button ng-click="onclick1()">submit</button>
+        </div>
+        <ng-view></ng-view>
+    </div>
+</body>
+
+</html>
