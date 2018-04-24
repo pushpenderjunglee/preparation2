@@ -1,0 +1,26 @@
+<div *ngIf="selectedHero">
+<h1>{{selectedHero.name |uppercase}} Details</h1>
+ <div><span>id:</span>{{selectedHero.id}}</div>
+<h2>
+  <label>Name:
+  <input  [(ngModel)]="selectedHero.name" placeholder="name">
+</label>
+  <!-- to get data in textbox (Two Way Binding) -->
+</h2>
+</div>
+<div>
+  
+<h2>
+  <ul>
+    <li *ngFor="let hero of heroes" class="list" (click) ="onSelect(hero)">
+      <!-- Event Binding -->
+      <h6 class="herolist">  {{hero.id}}   {{hero.name}} </h6>
+    </li>
+  </ul>
+</h2>
+</div>
+<li *ngFor="let hero of heroes"
+  [class.selected]="hero === selectedHero"
+  (click)="onSelect(hero)">
+  <span class="badge">{{hero.id}}</span> {{hero.name}}
+</li>

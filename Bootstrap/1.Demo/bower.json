@@ -1,0 +1,22 @@
+{
+  "name": "1.Demo",
+  "homepage": "https://github.com/pushpender1239/preparation2",
+  "authors": [
+    "pushpender <pushpender1239@gmail.com>"
+  ],
+  "description": "practice",
+  "main": "practice.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "^2.5.0",
+    "angular-route": "^1.6.9",
+    "angular": "^1.6.9"
+  }
+}
