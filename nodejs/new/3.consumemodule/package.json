@@ -1,0 +1,19 @@
+{
+  "name": "consumemodule",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.0",
+    "mydemomodule": "^1.0.0",
+    "node-cron": "^1.2.1",
+    "nodemailer": "^4.6.4"
+  }
+}
