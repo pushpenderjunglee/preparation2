@@ -31,7 +31,12 @@ route.post('/register',(req,res)=>{
 //   route.get('/profile',(req,res)=>{
 //     res.send("Inside Profile Page");
 //   })
-
+route.get('/search',(req,res)=>{
+  var userid = req.query.userid;
+  console.log("Userid is ",userid);
+  const userOperations = require("../config/crud");
+  userOperations.search(userid,res);
+})
 route.post('/login',(req,res)=>{
   var userid = req.body.userid; 
   var pwd = req.body.password;

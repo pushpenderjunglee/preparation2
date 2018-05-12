@@ -33,7 +33,7 @@ var userOperation = {
         });
     },
     search(userid, res) {
-        schema.findOne({ "userid": userid }, (err, record) => {
+        Schema.findOne({ "userid": userid }, (err, record) => {
             if (err) {
                 res.send("ERROR IN DB" + err);
             }
