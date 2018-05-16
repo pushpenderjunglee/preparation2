@@ -20,9 +20,7 @@ var userOperation = {
     login(object, res,req) {
 
         const bcrypt = require('bcrypt');
-        // var salt=bcrypt.genSaltSync(11);
-        // var hash = bcrypt.hashSync(object.pwd,salt);
-        // object.pwd=hash;
+       
         var passwd=object.pwd;
 
         Schema.findOne({ "userid": object.userid}, (error, record) => {
@@ -39,11 +37,11 @@ var userOperation = {
 
                     console.log('session  =', req.session);
                     console.log("record..",record);
-                    if(bcrypt.compareSync(passwd,record.pwd)){                    {
+                    if(bcrypt.compareSync(passwd,record.pwd)){                    
+                        {
                         req.session.userid=record.userid;
                         res.render('logindetail', { "user":req.session.userid });
-
-                    }
+                        }
                     // if(req.session)
                     // {
                     //     req.session.userid=record.userid;

@@ -1,0 +1,67 @@
+.list{
+    margin:0px;
+    padding:0px;
+    list-style: none;
+   
+}
+.list .ul{
+    text-decoration: none;
+    float:left;
+    width:255px;
+    height:50px;
+    background-color: black;
+    margin-left: 4px;
+     padding: 1px;
+    }
+
+    
+.list .ul a{
+    margin-left:-5px;
+    margin-right: 0px;
+    /* border:2px blue solid; */
+    height: 50px;
+    background-color: none;
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    text-align: center;
+
+}
+.list .ul a:hover{
+    display: block;
+    background-color: grey;
+    margin: 0px;
+    
+}
+.list1 {
+    margin:0px;
+    padding: 0px;
+    list-style: none;
+    
+}
+.list1 ul{
+    text-decoration: none;
+    float: left;
+    width:220px;
+    margin-bottom: 0px;
+   
+    background-size: cover;
+    margin-left: 2px;
+    text-align: right;  
+}
+.list1 ul li{
+    text-decoration: none;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    
+}
+div #list1 .left{
+    float: left;
+    margin-left:0px;
+    color:red
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Documen  t</title>
     <script>
         function exist(event) {
  
@@ -12,15 +12,15 @@
          
             fetch("/search?userid=" + val).then(data => {
                 data.json().then(d => {
-                    console.log("D ", d.message);
-                    console.log("event ",event);
+                    // console.log("D ", d.message);
+                    // console.log("event ",event);
                     document.querySelector("#result").innerHTML = d.message;
                 })
 
-                 console.log("Data is ", data);
+                 //console.log("Data is ", data);
             }).catch(err => {
                 document.querySelector("#result").innerHTML = err;
-                console.log("error is ", err);
+                //console.log("error is ", err);
             }); 
 
         }

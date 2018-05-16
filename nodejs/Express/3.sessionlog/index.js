@@ -13,7 +13,7 @@ app.use(bodyparser.urlencoded({extended:false}));
 const session = require("express-session");
 app.use(session({
   secret: 'thisisthesecret',
-  resave: false,
+  resave: false,//incase of website crash datakeep store
   saveUninitialized: true,
   cookie: { secure: false,maxAge: 60000 }
 
@@ -29,4 +29,4 @@ app.use(session({
 var server = app.listen(process.env.port|1234,()=>{
    console.log("server start",server.address().port);
   // res.send("server started!!");
-});
+}); 

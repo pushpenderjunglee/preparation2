@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/angular.min.js"></script>
+    <script>
+        function check() {
+            if (document.getElementById('password').value == document.getElementById('repassword').value) {
+                document.getElementById('result').innerHTML = "matching";
+                document.getElementById('result').style.color = 'green';
+            } else {
+                document.getElementById('result').style.color = "red";
+                document.getElementById('result').innerHTML = "Not matching";
+            }
+        }
+
+        function exist(event) {
+            console.log("event ",event);
+            var val = event.target.value;
+            console.log("values ",val);
+            fetch("/search?email=" + val).then(data => {
+                data.json().then(d => {
+                    console.log("D ", d.message);
+                    console.log("event ",event);
+                    document.querySelector("#exist").innerHTML = d.message;
+                })
+
+            }).catch(err => {
+                document.querySelector("#exist").innerHTML = "helo"+err;
+            });
+        }
+    </script>
+    
+</head>
+
+<body>
+    <div>
+        <form action="register" method="POST">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" name="username" placeholder="Enter Username" onchange="exist(event)" required>
+            </div>
+            <div>
+                <label for="">Email</label>
+                <input type="email" name="email" placeholder="Enter Email"  required>
+                <span id="exist"></span>
+            </div>
+            <div>
+                <label for="">Mobile</label>
+                <input type="number" name="mobile" placeholder="Enter Number" required>
+            </div>
+            <div>
+                <label for="">Password</label>
+                <input type="password" name="password" placeholder="Enter Password" id="password" required>
+            </div>
+            <div>
+                <label for="">Re-Enter Password</label>
+                <input type="password" placeholder="Re-Enter Password" id="repassword" onchange="check()" required>
+                <span id="result"></span>
+            </div>
+            <div>
+                <label for="">Address</label>
+                <input type="textarea" name="address" placeholder="Enter Address" required>
+            </div>
+            <input type="submit" value="Submit">
+            already Registered <a href="login.html">Click Here </a> for Login.
+        </form>
+    </div>
+</body>
+
+</html>
