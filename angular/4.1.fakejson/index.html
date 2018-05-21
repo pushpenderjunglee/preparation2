@@ -26,7 +26,11 @@
             </select>
         </div>
         <ol>
-            <li ng-repeat="res in result|filter:search|orderBy:sortby" style="display:block"> Brand:{{res.brand}} Size:{{res.size}} color:{{res.colour}} discount:{{res.discount}} rating:{{res.rating}} <img src="{{res.img}}"> </li>
+            <li ng-repeat="res in result|filter:search|orderBy:sortby" style="display:block"> 
+            
+            Brand:{{res.brand}} Size:{{res.size}} color:{{res.colour}} discount:{{res.discount}} 
+            rating:{{res.rating}} 
+            <img src="{{res.img}}"> </li>
         </ol>
     </div>
 </body>

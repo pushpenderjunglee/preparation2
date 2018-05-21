@@ -42,8 +42,8 @@
                 salary: 20000
             }];
             $scope.emp = emps;
-            $rootScope.firstname = "Amit"; //controller talk
-            myfactory.setX(1000);
+            $rootScope.firstname = "Amit"; //controller talk(type 1)
+            myfactory.setX(1000);//(type 2)
         });
         app.controller("myctrl2", function($scope, myfactory, myfactory2) {
             $scope.lastname = "srivastava";
@@ -58,7 +58,8 @@
         <h3>Employers are:</h3>
         <ul ng-repeat="r in emp">
             <li> {{r.id}} {{r.name}} {{r.salary}} </li>
-        </ul> first name is {{firstname}} </div>
+        </ul> first name is {{firstname}}
+    </div>
     <div ng-controller="myctrl2"> First name{{firstname}} Last name {{lastname}} Full name is {{fullname}}</div>
     <input type="text" ng-model="name">
     <h2 class="alert-success">{{name}}</h2>

@@ -1,5 +1,5 @@
 var schema = require('./schema');
-var prodSchema = require('./ProductSchema');
+var Product = require('./ProductSchema');
 var userOperation = {
     register(UserObj, res) {
         schema.create(UserObj, (error) => {
@@ -11,7 +11,6 @@ var userOperation = {
         });
     },
     login(userObj, res, req) {
-
         schema.findOne({
             "username": userObj.username,
             "password": userObj.password
@@ -21,10 +20,13 @@ var userOperation = {
             } else {
                 if (record) {
                     // res.send("result" + record);
-
-                    res.render('index', {
-                        "user": userObj.username
-                    });
+                    if (req.session) {
+                        req.session.uid = record.username;
+                        console.log("req.session.uid", req.session.uid);
+                        res.render('index', {
+                            "user": userObj.username
+                        });
+                    }
                 } else {
                     return;
                     //res.send("Enter correct username and password");
@@ -52,15 +54,22 @@ var userOperation = {
         });
     },
     home(req, res) {
-        console.log("prodschema",prodSchema);
-        prodSchema.findOne({'id':'1'},(err, record) => {
+        // console.log("prodschema", prodSchema);
+        res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content - Type, Accept ");
+
+        Product.find({}, (err, record) => {
             if (err) {
                 res.send("Error in Db " + err);
             } else {
+                // console.log("***record", record);
                 if (record) {
-                    console.log("record", record);
-                    res.send("id=" + record.id + " name = " + record.name);
-                    
+                    console.log(record)
+                    res.status(200).send({
+                        success: true,
+                        records: record
+                    });
+                    // res.send("id=" + record.id + " name = " + record.name);
                 } else {
                     res.send('ERror in data');
                 }

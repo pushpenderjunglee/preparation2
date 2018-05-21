@@ -1,8 +1,23 @@
 const mongoose = require('./connection');
-const prodSchema=mongoose.Schema;
-var prod =new prodSchema({id:Number,name:String});
+const ProdSchema = mongoose.Schema;
+var prod = new ProdSchema({
+    prodId: String,
+    prodName: String
+});
 
-var User= mongoose.model("product",prod);
-module.exports=User;
+var Product = mongoose.model("product", prod);
+module.exports = Product;
 
 
+// const mongoose = require('./connection');
+// const UserSchema = mongoose.Schema;
+// var user = new UserSchema({
+//     username: String,
+//     email: String,
+//     mobile: Number,
+//     password: String,
+//     address: String
+// });
+
+// var User = mongoose.model("users", user);
+// module.exports = User;

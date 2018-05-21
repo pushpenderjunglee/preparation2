@@ -1,5 +1,5 @@
 const express = require('express');
-const route = express();
+const route = express.Router();
 
 
 route.post('/register', (req, res) => {
@@ -30,16 +30,17 @@ route.post('/login', (req, res) => {
     const model = require('../model/login');
     const dataObj = new model(username, password);
     console.log("pass", dataObj);
-    crud.login(dataObj, res);
+    crud.login(dataObj, res,req);
     console.log('.............');
   
 
 });
 route.get('/home', (req, res) => {
-    console.log("session", req.session);
-    if (req.session ) {
-        console.log("req.session",req.session);
-        console.log("req usrname",req.session.username);
+  console.log("session", req.session);
+  console.log("req usrname",req.session.uid);
+    if (req.session && req.session.uid) {        
+        //console.log("req.session",req.session);
+        console.log("req usrname",req.session.uid);
         //res.sendFile(__dirname, "/Local/Product.html")
         //res.send("product id");
         const Crud=require('../db/crud');

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/angular.min.js"></script>
+    <script>
+        var app = angular.module("CtrlTalk", []);
+        //var app2 = angular.module("CtrlTalk2", []);
+
+        app.controller("Controller1", function ($scope, $rootScope, Factory1) {
+            var emps = [{
+                name: "ajay",
+                age: 20
+            }, {
+                name: "vijay",
+                age: 35
+            }];
+            $scope.details = emps;
+            $rootScope.firstname = "Abhishek";
+            Factory1.setA(200);
+
+        });
+        app.controller("Controller2", function ($scope, Factory1, Factory2) {
+            $scope.lastname = "Sharma"
+            $scope.fullname = $scope.firstname + " " + $scope.lastname + " " + Factory2.getName("Ajay") + " " +
+                Factory1.getA();
+
+        });
+
+        app.factory("Factory1", () => {
+            var obj = {
+                a: 0,
+                setA(a) {
+                    this.a = a;
+                },
+                getA() {
+                    return this.a;
+                }
+            }
+            return obj;
+        });
+        app.factory("Factory2", () => {
+            var obj = {
+
+                getName(name) {
+                    return "Hello " + name;
+                }
+            }
+            return obj;
+        });
+    </script>
+
+</head>
+
+<body>
+    <div ng-app="CtrlTalk">
+        <div ng-controller="Controller1">
+            <ul>
+                <li ng-repeat="r in details">
+                    Name:{{r.name}} Age :{{r.age}}
+                </li>
+                FirstName:{{firstname}}
+            </ul>
+        </div>
+        <div ng-controller="Controller2">
+            {{fullname }}
+
+            <!-- filters -->
+
+            <input type="checkbox" ng-model="enableDisableButton">Disable Button
+            <button ng-disabled="enableDisableButton">Click Me!</button>
+            <input type="checkbox" ng-model="showHide1">Show Button
+            <button ng-show="showHide1">Click Me!</button>
+
+            <p>Total click: {{ clickCounter }}</p>
+            </td>
+            <button ng-click="clickCounter = clickCounter + 1">Click Me!</button>
+
+
+        </div>
+        <div ng-app="" ng-controller="studentController"></div>
+        <div ng-include="'./demo.html'"></div>
+
+    </div>
+    </div>
+</body>
+
+</html>
