@@ -7,10 +7,10 @@ $scope.user = function () {
     //console.log("$scope...",$scope.users);
     var promise =aboutFactory.getUser();
     promise.then(function(data){
-        console.log("data in ctrl",data.data.records); 
-        $scope.detail = data.data.records;
+        console.log("data.data in ctrl",data.data.records); 
+        $scope.detail = data.data;
         console.log("detail",$scope.detail);
-    }),function(){
+    }),function(er){
         $scope.error =er;
     }
 }

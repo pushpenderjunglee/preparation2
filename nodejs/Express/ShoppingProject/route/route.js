@@ -30,28 +30,23 @@ route.post('/login', (req, res) => {
     const model = require('../model/login');
     const dataObj = new model(username, password);
     console.log("pass", dataObj);
-    crud.login(dataObj, res,req);
-    console.log('.............');
-  
+    crud.login(dataObj, res, req);
+    });
 
-});
 route.get('/home', (req, res) => {
-  console.log("session", req.session);
-  console.log("req usrname",req.session.uid);
-    if (req.session && req.session.uid) {        
-        //console.log("req.session",req.session);
-        console.log("req usrname",req.session.uid);
-        //res.sendFile(__dirname, "/Local/Product.html")
-        //res.send("product id");
-        const Crud=require('../db/crud');
-        Crud.home(req,res);
-
+    console.log("session", req.session);
+    console.log("req usrname", req.session.uid);
+    if (req.session && req.session.uid) {
+        const Crud = require('../db/crud');
+        Crud.home(req, res);
     } else {
         const path = require('path');
         const newpath = path.normalize(__dirname + "/..");
-        const fullpath = path.join(newpath, 'Local/login.html');
+        const fullpath = path.join(newpath, 'public/login.html');
         console.log("path..", fullpath);
         res.sendFile(fullpath);
     }
 });
+
+
 module.exports = route;

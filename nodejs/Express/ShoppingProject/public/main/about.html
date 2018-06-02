@@ -1,0 +1,14 @@
+<h2>{{msg}}</h2>
+
+<div>
+    <button ng-click="user()">Get All User</button>
+    <ul>
+        <li ng-repeat="user in detail.records">
+            {{user.prodId}}  {{user.prodName}}
+            
+        </li> 
+        {{error}}
+    </ul>
+ </div>
+
+ 

@@ -26,6 +26,12 @@
     <div ng-app="myApp" ng-controller="myControl">
         <p ng-repeat="x in names|filter:test">{{x | uppercase}} </p>
         <h1 ng-model="number">{{number }}</h1>
+        <div ng-init="customers=[{name:'ajay',city:'noida'},{name:'vijay',city:'najafgrah'},{name:'robin',city:'gurgaon'}]">
+           <input type="text" ng-model="nametxt">
+            <li ng-repeat="data in customers|filter:nametxt | orderBy:'name'">
+            {{data.name|uppercase}}  {{data.city|uppercase}}
+            </li>
+        </div>
 
     </div>
     <script>

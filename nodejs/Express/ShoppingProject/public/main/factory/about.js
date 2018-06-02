@@ -8,7 +8,7 @@ app.factory("aboutFactory", ($http, $q) => {
             console.log("in factory")
             var pr = $q.defer();
             $http.get('http://localhost:1234/home').then(function (data) {
-                console.log("data rec is",data.data.records)
+                console.log("data rec is",data)
                     pr.resolve(data);
                 }, function (er) {
                     console.log("err rec is",er)
@@ -16,7 +16,7 @@ app.factory("aboutFactory", ($http, $q) => {
                 })
                 return pr.promise;
             }
-            // console.log("promise", pr.promise);       
+           // console.log("promise", pr.promise);       
     };
     return obj;
 })
