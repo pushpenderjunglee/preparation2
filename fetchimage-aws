@@ -1,0 +1,17 @@
+from flask import Flask, request 
+import pandas as pd
+import boto3
+import boto.s3.connection
+
+# df = pd.read_csv('E:\\Bulkimages\\Aadhar-Dataset\\Aadhar-Dataset1.csv')
+
+# BUCKET_NAME = 'jrnonprodkyc' 
+s3 = boto3.resource('s3',aws_access_key_id='key',aws_secret_access_key='key')
+bucket=s3.Bucket('jrnonprodkyc')
+for bucket_item in bucket.objects.all():
+    s3 = boto3.client('s3',aws_access_key_id='key',aws_secret_access_key='key')
+    try:
+        s3.download_file('jrnonprodkyc',bucket_item.key,'E:/Bulkimages/download/aadhar/'+bucket_item.key)
+        print(bucket_item.key)
+    except:
+        exit
